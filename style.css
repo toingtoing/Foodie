@@ -21,7 +21,7 @@ html{
 .section-1{
     height: 100vh;
     width: 100%;
-    background-color: lightblue;
+    background-color: lightskyblue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@ html{
 .section-heading{
     font-size: 12rem;
     font-weight: 900;
-    color: white;
+    color:#fbf8fc;
     text-transform: capitalize;
     letter-spacing: 0.5rem;
     text-align: center;
@@ -41,7 +41,7 @@ html{
 
 .section-1-icons i{
     font-size: 35rem;
-    color: #5C6F68;
+    color: #46494C;
     position: absolute;
     transform: translate(-50%,-50%)scale(0);
     text-shadow: 0.3rem 0.3rem 0.3rem black;
@@ -54,3 +54,89 @@ html{
     transition: transform .3s;
 }
 /* end of section 1 */
+
+/* section 2 */
+.section-2{
+    height: 100vh;
+    width: 100%;
+    background-color: #4C5C68;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 10rem;
+}
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 30rem;
+    background-color: lightskyblue;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1rem 1rem 1rem black;
+    justify-content: space-between;
+    position: relative;
+    transform: rotateY(20deg)skewX(-2deg);
+}
+.card:hover{
+    transform: translateY(40deg)skewX(-4deg)translateY(-6rem);
+    box-shadow: 2rem 2rem 2rem black;
+}
+
+.card ::before{
+    content: "";
+    height: 100%;
+    width: 1rem;
+    position: absolute;
+    background-color:rgb(111, 197, 250) ;
+    top: 0;
+    left: -1rem;
+    transform: skewY(45deg);
+    transform-origin: right;
+    box-shadow: -.2rem -.2rem -.2rem black;
+}
+
+.card ::after{
+    content: "";
+    height: 1rem;
+    width: 100%;
+    position: absolute;
+    background-color:rgb(111, 197, 250) ;
+    top: -1rem;
+    left: 0;
+    transform: skewX(45deg);
+    transform-origin: bottom;
+    box-shadow: -.2rem -.2rem -.2rem black;
+}
+.card-name{
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin: 2rem 0;
+    text-shadow: 0.2rem 0.2rem .2rem black;
+    color:#fbf8fc ;
+}
+.card-img{
+    width: 100%;
+    /* height: auto; */
+}
+.card-btn{
+    width: 70%;
+    background-color: black;
+    color:#fbf8fc ;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border: none;
+    letter-spacing: .2rem;
+    padding: .5rem 0;
+    cursor: pointer;
+    box-shadow: -.2rem -.2rem .2rem black;
+}
+
+/* end of section 2 */
