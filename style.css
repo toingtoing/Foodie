@@ -160,10 +160,53 @@ html{
     margin:4rem 1rem ;
     position: relative;
 }
+.gallery-link::before{
+    content: "";
+    position: absolute;
+    top: 2vh;
+    left: 80%;
+    width: 0.2vw;
+    height: 0;
+    background-color: #fbf8fc;
+    transition: height .5s;
+    z-index: 10;
+}
+
+.gallery-link:hover::before{
+    height: 80%;
+}
+.gallery-link::after{
+    content: "";
+    position: absolute;
+   left: 2rem;
+    top: 30%;
+    width: 0;
+    height: 0.2rem;
+    background-color: #fbf8fc;
+    transition: width 0.5s;
+   
+}
+.gallery-link:hover::after{
+    width: 90%;
+}
 .gallery-item-img{
     height: 25vh;
     width: 25vw;
     object-fit: cover;
+    box-shadow: .3rem .3rem .1rem red,
+                .5rem .5rem .1rem blue,
+                .8rem .8rem .1rem green,
+                1rem 1rem .1rem orange;
+    transition: all .5s;
+}
+.gallery-link:hover .gallery-item-img{
+    box-shadow: 1rem 1rem .11rem red,
+                2rem 2rem .1rem blue,
+                3rem 3rem .1rem green,
+                4rem 4rem .1rem orange;
+                filter: blur(0.5s);
+                opacity: .5;
+    transform:scale(1.1);
 }
 .gallery-item-name{
     position: absolute;
@@ -174,15 +217,31 @@ html{
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: white;
+    overflow: hidden;
+    width: 0;
+    transition: width 0.3s;
+}
+.gallery-link:hover .gallery-item-name{
+    width: 100%;
+    transition: width 1.5s 0.5s;
 }
 .gallery-item-info{
     width: 70%;
     position: absolute;
-    bottom: 3vw;
+    bottom: 1vw;
+    color: white;
     left: 2rem;
     font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+.gallery-link:hover .gallery-item-info{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s 1s;
 }
 
 
